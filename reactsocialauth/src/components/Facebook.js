@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
+import '../styles/Facebook.css';
 
 export default class Facebook extends Component {
   state = {
@@ -23,6 +24,13 @@ export default class Facebook extends Component {
 
   componentClicked = () => {
     console.log('Clicked!');
+    this.setState({
+      isLoggedIn: false,
+      userID: null,
+      name: null,
+      email: null,
+      picture: null
+    });
   }
 
   render() {
@@ -39,6 +47,9 @@ export default class Facebook extends Component {
           <img src={this.state.picture} alt={this.state.name}/>
           <h2>Welcome {this.state.name}</h2>
           Email: {this.state.email}
+          <div>
+          <button className="logout" onClick={this.componentClicked}>Logout</button>
+          </div>
         </div>
       );
     } else {
