@@ -10,11 +10,19 @@ export default class Facebook extends Component {
     picture: ''
   }
 
+  responseFacebook = res => {
+    console.log(res);
+  }
+
+  componentClicked = () => {
+    console.log('Clicked!');
+  }
+
   render() {
     let fbContent;
 
     if (this.state.isLoggedIn) {
-
+      fbContent = null;
     } else {
       fbContent = (
       <FacebookLogin
@@ -28,7 +36,7 @@ export default class Facebook extends Component {
     }
     return (
       <div>
-        
+        {fbContent}
       </div>
     )
   }
