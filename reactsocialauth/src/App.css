@@ -1,11 +1,13 @@
 .App {
   text-align: center;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-header {
-  /* width: 500px; */
+  align-self: center;
+  width: 500px;
   background-color: #222;
   height: 60px;
   padding: 20px;

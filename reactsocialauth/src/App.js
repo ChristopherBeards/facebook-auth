@@ -9,6 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React Facebook Auth</h1>
         </header>
+        <p>Enter into parts unknown, but first! Authenticate with the book of face!</p>
         <Facebook />
       </div>
     );
